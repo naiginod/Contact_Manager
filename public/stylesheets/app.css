@@ -1,0 +1,251 @@
+body {
+  font-family: "Helvetica Neue";
+  margin: 0;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* banner */
+
+.banner {
+  background: linear-gradient(#553F7A, #6E5697);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px;
+  height: 137px;
+}
+
+.banner h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 500;
+  margin: 15px 0 -10px 0;
+}
+
+.banner h3 {
+  color: #CDC0E2;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+/* all components */
+
+.allComponents {
+  position: relative;
+  overflow: hidden;
+}
+
+.spacer {
+  height: 400px;
+}
+/* tools */
+
+.tools {
+  width: 90%;
+  height: 80px;
+  margin: 0 auto 20px auto;
+  background: #F5F5F5;
+  border: 1px solid #E3E3E3;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background: #F5F5F5;
+  border: 1px solid #553F7A;
+  color: #553F7A;
+}
+
+.addContact {
+  margin-top: 17px;
+  height: 45px;
+  width: 140px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.hover {
+  background: #553F7A;
+  color: #fff;
+}
+
+.searchBar {
+  margin-top: 22px;
+  height: 30px;
+  width: 240px;
+  border: 1px solid #E3E3E3;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+/* create & edit contact */
+
+h2 {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.createContact,
+.editContact {
+  position: absolute;
+  top: 400px;
+  width: 100%;
+  text-align: center;
+  display: none;
+  height: 400px;
+}
+
+.content {
+  border-top: 1px solid #E3E3E3;
+  box-sizing: border-box;
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.formLine {
+  margin: 10px auto;
+  padding-right: 180px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.formInput {
+  width: 600px;
+  height: 30px;
+  border: 1px solid #E3E3E3;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.formButton {
+  height: 45px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 20px 10px;
+}
+
+label {
+  padding: 10px 20px 0 0;
+}
+
+/* no contacts */
+
+.noContacts {
+  width: 85%;
+  background: #F5F5F5;
+  border: 1px solid #E3E3E3;
+  height: 150px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+  display: none;
+}
+
+.noContacts .addContact {
+  margin-top: -10px;
+}
+
+/* contact */
+#contacts {
+  width: 90%;
+  margin: 10px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.contact {
+  position: relative;
+  display: inline-block;
+  width: 265px;
+  box-sizing: border-box;
+  margin: 11px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.detail,
+.info {
+  font-size: 14px;
+  padding: 2px 0;
+}
+
+.detail {
+  font-weight: 600;
+}
+
+.contactButton {
+  position: absolute;
+  border: 1px solid #553F7A;
+  font-size: 14px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  bottom: 5px;
+  width: 100px;
+  height: 30px;
+}
+
+.edit {
+  left: 20px;
+}
+
+.delete {
+
+  right: 20px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 3px;
+  margin: 0 2px;
+  background: tomato;
+  color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  width: 85%;
+  border-top: 1px solid #E3E3E3;
+  margin: 50px auto;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #2D6594;
+}
+
+#allContacts {
+  background: #F5F5F5;
+  border: 1px solid #553F7A;
+  color: #553F7A;
+  height: 40px;
+  font-size: 14px;
+  margin: 0 60px;
+  border-radius: 5px;
+  display: none;
+  cursor: pointer;
+}

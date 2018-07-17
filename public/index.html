@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel='stylesheet' href='/stylesheets/app.css' />
+  <script type="text/javascript" src="/javascripts/jquery.js"></script>
+  <script type="text/javascript" src="/javascripts/handlebars.js"></script>
+  <script type="text/javascript" src="/javascripts/app.js"></script>
+</head>
+<body>
+  <div class="banner">
+    <h1>Contact Manager</h1>
+    <h3>Using Backbone.js, Localstorage, RequireJS, Handlebar and Bootstrap</h2>
+  </div>
+  <div class='allComponents'>
+    <div class="main">
+      <div class="tools">
+        <button class="addContact">Add Contact</button>
+        <input class="searchBar" type="text" placeholder="Search"/>
+      </div>
+
+      <button id="allContacts">Show All Contacts</button>
+
+      <div id="contacts"></div>
+      <div class="noContacts">
+        <p>There is no contacts.</p>
+        <button class="addContact">Add Contact</button>
+      </div>
+    </div>
+    <div class="createContact">
+      <h2>Create Contact</h2>
+      <div class='content'>
+        <form class='contactForm new' method="post" action="/">
+          <div class='formLine'>
+              <label for="full_name">Full name:</label>
+              <input class='formInput' type='text' id="full_name" name="full_name"/>
+          </div>
+          <div class='formLine'>
+              <label for="email">Email address:</label>
+              <input class='formInput' id="email" name="email" type='email' />
+          </div>
+          <div class='formLine'>
+              <label for="phone_number">Telephone number:</label>
+              <input class='formInput' type='tel' id="phone_number" name="phone_number" />
+          </div>
+          <div class='formLine'>
+            <label for="tags">Tags:</label>
+            <input class='formInput' type='text' id="tags" name="tags" placeholder="Separate with commas" />
+          </div>
+          <button class='formButton submit'>Submit</button>
+          <button class='formButton cancel'>Cancel</button>
+        </form>
+      </div>
+    </div>
+
+    <div class='editContact'>
+      <h2>Edit Contact</h2>
+      <div class='content'>
+        <form class='contactForm updated' method="post" action="/">
+          <div class='formLine'>
+              <label for="full_name">Full name:</label>
+              <input class='formInput' type='text' id="full_name" name="full_name"/>
+          </div>
+          <div class='formLine'>
+              <label for="email">Email address:</label>
+              <input class='formInput' id="email" name="email" type='email' />
+          </div>
+          <div class='formLine'>
+              <label for="phone_number">Telephone number:</label>
+              <input class='formInput' type='tel' id="phone_number" name="phone_number" />
+          </div>
+          <div class='formLine'>
+              <label for="tags">Tags:</label>
+              <input class='formInput' type='text' id="tags" name="tags" placeholder="Separate with commas and no spaces." />
+            </div>
+          <button class='formButton submit'>Submit</button>
+          <button class='formButton cancel'>Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>Developed by <a href="#">Devsaran.com</a> and <a href="#">239 Listing Real Estate.</a></p>
+  </footer>
+  
+
+  <script id="contact_template" type="text/x-handlebars-template">
+    <div class='contact' data-id={{id}}>
+        <div class='name'>{{full_name}}</div>
+        <div class='contactDetails'>
+          <div class="detail phone">Phone Number:</div>
+          <div class="info phone">{{phone_number}}</div>
+          <div class="detail email">Email:</div>
+          <div class="info email">{{email}}</div>
+          <div class="detail tags">Tags:</div>
+          <div class="info tags" data-id={{id}}>{{{tagSplice tags}}}</div>
+        </div>
+        <button class='contactButton edit'>Edit</button>
+        <button class='contactButton delete'>Delete</button>
+      </div>
+  </script>
+
+  <script id="contacts_template" type="text/x-handlebars-template">
+    {{#each contact}}
+      {{> contact_template}}
+    {{/each}}
+  </script>
+</body>
+</html>
